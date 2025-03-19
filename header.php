@@ -12,7 +12,7 @@
             <div class="logo"><a href="index.php">Fatty CV</a></div>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="create-cv.php">Templates</a></li>
+                <li><a href="template.php">Templates</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>

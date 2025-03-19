@@ -16,7 +16,7 @@
             <div class="container">
                 <h1>ye</h1>
                 <p>Cham ngon.</p>
-                <a href="create-cv.php" class="btn">Create my CV</a>
+                <a href="template.php" class="btn">Create my CV</a>
             </div>
         </section>
 

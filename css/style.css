@@ -448,3 +448,236 @@ footer {
         margin: 5px;
     }
 }
+
+/* contact Page */
+
+
+.contact {
+    padding: 100px 0;
+    text-align: center;
+}
+.contact-container {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-container h1 {
+    color: #3d1f06;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Styling for paragraph text */
+.contact-container p {
+    color: #8e6529;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Styling for contact box container */
+.contact-box {
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+    margin: auto;
+    backdrop-filter: blur(50px);
+    box-shadow: 1px 1px 5px #987f6f;
+}
+
+/* Styling for heading inside left container */
+.contact-container h3 {
+    font-size: 30px;
+    color: #353535;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #695749, #44301e);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: titleEffect 3s linear infinite;
+}
+
+@keyframes titleEffect {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+/* Styling for input fields */
+input {
+    width: 95%;
+    border: none;
+    color: #353535;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+} 
+
+/* Styling for textareas */
+textarea {
+    font-family: "Bookman", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for labels */
+label {
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    color: #353535;
+    text-align: left;
+    margin-left: 8px;
+}
+
+/* Styling for buttons */
+button {
+    font-weight: 600;
+    font-size: 15px;
+    background: #80604a;
+    border: none;
+    color: #fff;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: all 0.25s ease 0s;
+    box-shadow: 0px 5px 10px 0px #0000003a;
+    margin-bottom: 20px;
+}
+
+/* Hover styling for buttons */
+button:hover {
+    color: #fff;
+    background: hsl(29, 77%, 24%);
+    box-shadow: 0px 5px 10px 0px hsla(207, 97%, 35%, 0.2);
+}
+
+/*(laptop) */
+@media only screen and (min-width: 1367px) {
+    .contact-container {
+        width: 70%;
+    }
+
+    .contact-container h1 {
+        font-size: 50px;
+    }
+
+    .contact-container p {
+        font-size: 25px;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 30%;
+    }
+}
+
+/* Laptop */
+@media only screen and (max-width: 1366px) {
+    .contact-container {
+        width: 70%;
+    }
+
+    .contact-container h1 {
+        font-size: 45px;
+    }
+
+    .contact-container p {
+        font-size: 22px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+/* Tablet */
+@media only screen and (max-width: 1024px) {
+
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        width: 80%;
+    }
+
+    .contact-container h1 {
+        font-size: 40px;
+    }
+
+    .contact-container p {
+        font-size: 22px;
+    }
+
+    .input-row {
+        flex-wrap: wrap;
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 25%;
+    }
+}
+
+/*  (mobile) */
+@media only screen and (max-width: 767px) {
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-container h1 {
+        font-size: 40px;
+    }
+
+    .contact-container p {
+        font-size: 18px;
+    }
+
+    .input-row {
+        flex-direction: column; /* Stack input rows vertically */
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        width: 60%;
+    }
+
+}

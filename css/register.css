@@ -1,0 +1,59 @@
+body {
+    width: 98vw;
+    height: 95vh;
+    font-family: 'Bookman', sans-serif;
+    display: flex;
+    overflow-x: hidden;
+}
+h1 {
+    padding: 5px;
+    font-size: 2.5vw;
+    margin-bottom: 2.5vh;
+}
+form input {
+    width: 75%;
+    padding: 10px;
+    font-size: 1.1vw;
+    margin: 2%;
+    border: none;
+    border-radius: 5px;
+}
+form input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px #695749;
+}
+form button {
+    background-color: #695749;
+    color: #ffffff;
+    font-size: 1.2vw;
+    padding: 10px 15px;
+    margin: 3%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#signupbox {
+    width: 30vw;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    background-color: #c0ab8c;
+    border: none;
+    box-shadow: 0 0 5px #c0ab8c;
+    border-radius: 15px;
+}
+form a {
+    text-decoration: none;
+}
+form a img {
+    width: 8%;
+}
+#login-option {
+    margin: auto;
+    width: 75%;
+    display: flex;
+    font-size: 1.1vw;
+    flex-direction: row;
+    justify-content: space-between;
+}

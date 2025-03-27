@@ -207,7 +207,7 @@ footer {
 .home {
     background: #c0ab8c;
     color: white;
-    padding: 100px 0;
+    padding: 110px 0;
     text-align: center;
 }
 
@@ -215,12 +215,17 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-top: 120px;
 }
 
 .home h1 {
     font-size: 48px;
+    color: #3d1f06;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+    animation: autoEffect 3s linear infinite;
 }
+
 
 .home p {
     font-size: 24px;
@@ -242,7 +247,6 @@ footer {
 }
 
 .features {
-    background: #fff;
     padding: 60px 0;
     text-align: center;
 }
@@ -258,14 +262,19 @@ footer {
     margin-bottom: 40px;
 }
 
+.feature-row {
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 .feature-item {
-    display: inline-block;
-    width: 30%;
-    margin: 1.5% 2%;
+    margin-top: 3%;
+    width: 500px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     transition: transform 0.3s;
+    background-color: white;
 }
 
 .feature-item i {
@@ -304,8 +313,7 @@ body {
 
 /* Templates Section */
 .templates {
-    background: #fff;
-    padding: 60px 0;
+    padding: 140px 0;
     text-align: center;
 }
 
@@ -337,7 +345,8 @@ body {
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    width: 30%;
+    width: 400px;
+    height: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -346,6 +355,7 @@ body {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .template-item .btn {

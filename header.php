@@ -9,7 +9,7 @@
 <body>
     <header style="position: fixed;">
         <nav class="navbar">
-            <div class="logo"><a href="home.php">Fatty CV</a></div>
+            <div class="logo"><a href="home.php"> CV</a></div>
             <ul class="nav-links">
                 <li><a href="home.php">Home</a></li>
                 <li><a href="template.php">Templates</a></li>

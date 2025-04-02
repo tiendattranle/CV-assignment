@@ -1,4 +1,14 @@
+
+<?php
+include_once("login_db.php");
+
+if(isset($_SESSION['username'])){
+	header("Location:login.php");
+}
+?>
 <?php @include 'header.php'; ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

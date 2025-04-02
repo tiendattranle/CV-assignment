@@ -16,7 +16,7 @@
             <input type="password" id="password" placeholder="Password">
             <br>
             <div id="login-option">
-                <a href="">Create account</a>
+                <a href="register.php">Create account</a>
                 <a href="">Forgot password?</a>
             </div>
             <br>

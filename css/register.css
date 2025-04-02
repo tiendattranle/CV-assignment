@@ -57,3 +57,11 @@ form a img {
     flex-direction: row;
     justify-content: space-between;
 }
+
+#signup-option {
+    width: 75%;
+    font-size: 1.1vw;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+}

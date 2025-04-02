@@ -16,6 +16,10 @@
             <input type="email" id="email" placeholder="Email">
             <input type="password" id="password" placeholder="Password">
             <input type="password" id="cfmpassword" placeholder="Confirm Password">
+            <br>
+            <div id="signup-option"> 
+                <a href="login.php">Already have account?</a>
+            </div>
             <button type="submit">Sign Up</button>
         </form>
     </div>

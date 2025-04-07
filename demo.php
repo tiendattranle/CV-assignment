@@ -17,7 +17,7 @@ include_once("login_db.php");
 	<form method="post">
 		<div id="header">
 			<ul id="navbar">
-				<li class="lists"><a class="options" href="index_In.php">Home</a></li>
+				<li class="lists"><a class="options" href="index.php">Home</a></li>
 				<li class="lists"><a class="options" href="My_CV.php">CV</a>
 					<ul id="sub_bar">
 						<li class="sub_lists"><a class="sub_options" href="demo.php">My CV</a></li>

@@ -19,15 +19,15 @@
                 <div class="template-grid">
                     <div class="template-item">
                         <img src="images/template1.png" alt="Template 1">
-                        <a href="create-cv.php?template=1" class="btn">Use Template 1</a>
+                        <a href="template1.php" class="btn">Use Template 1</a>
                     </div>
                     <div class="template-item">
                         <img src="images/template2.png" alt="Template 2">
-                        <a href="create-cv.php?template=2" class="btn">Use Template 2</a>
+                        <a href="template2.php" class="btn">Use Template 2</a>
                     </div>
                     <div class="template-item">
                         <img src="images/template3.png" alt="Template 3">
-                        <a href="create-cv.php?template=3" class="btn">Use Template 3</a>
+                        <a href="template3.php" class="btn">Use Template 3</a>
                     </div>
                 </div>
             </div>

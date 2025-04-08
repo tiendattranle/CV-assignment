@@ -80,6 +80,48 @@ body {
     cursor: pointer;
 }
 
+.lists {
+    display: inline-block;
+    position: relative;
+}
+
+/* Style the dropdown to look like a nav button */
+.cv-dropdown {
+    background-color: transparent; /* Blend with navbar background */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Match typical nav link padding */
+    font-size: 16px; /* Match font size */
+    font-family: 'Bookman', sans-serif; /* Match font */
+    color: white; /* Match navbar text color */
+    cursor: pointer;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; /* Custom white dropdown arrow */
+}
+
+/* Remove outline on focus for better aesthetics */
+.cv-dropdown:focus {
+    outline: none;
+}
+
+/* Style the dropdown options */
+.cv-dropdown option {
+    background-color: #c0ab8c; /* Match navbar background */
+    color: white; /* Match text color */
+}
+
+/* Hover effect to match typical nav links */
+.cv-dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+}
+
+/* Ensure the dropdown aligns with other nav items */
+.lists .cv-dropdown {
+    display: inline-block;
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-links {

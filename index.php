@@ -1,41 +1,50 @@
 <?php
 include_once("login_db.php");
 
-if(!isset($_SESSION['username'])){
-	header("Location:login.php");
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
 }
 ?>
 
-<!-- after login show this page -->
+<?php @include 'header.php'; ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="Navigation_bar.css">
-	<meta name="viewport" content="width=device-width initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="Navigation_bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<form>
-		<div id="header">
-			<ul id="navbar">
-				<li class="lists"><a class="options" href="index.php">Home</a></li>
-				<li class="lists"><a class="options" href="demo.php">CV</a>
-					<ul id="sub_bar">
-						<li class="sub_lists"><a class="sub_options" href="demo.php">My CV</a></li>
-						<li class="sub_lists"><a class="sub_options" href="Update_CV.php">Update CV</a></li>
-					</ul>
-				</li>
-				<li class="lists"><a class="options" href="#">About</a></li>
-				<li class="lists"><a class="options" href="#">Contact</a></li>
-				<li id="log_list"><a id="log_option" href="Login_dbo.php?logout='1'">
-					<?php if(isset($_SESSION['username'])) echo $_SESSION['username']." "?>Logout
-				</a></li>
-			</ul>
-		</div>
-		<marquee direction="right" bgcolor="green" id="marquee">
-			Welcome!!!
-		</marquee>
-	</form>
+    <main class="main-content">
+        <!-- Home section now contains welcome content -->
+        <section class="home" style="background-image: url('images/contact.jpg'); background-size: cover;">
+            <div class="container">
+                <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+                <p>Create or update your CV with ease.</p>
+                <a href="template.php" class="btn">Create My CV</a>
+            </div>
+        </section>
+
+        <!-- Features section -->
+        <section class="features">
+            <div class="container">
+                <div class="feature-row" style="display: flex; gap: 80px;">
+                    <div class="feature-item">
+                        <i class="fas fa-pencil-alt"></i>
+                        <!-- Removed marquee as it was commented out -->
+                        <p>Start building your CV today!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <?php @include 'footer.php'; ?>
 </body>
 </html>

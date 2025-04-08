@@ -173,3 +173,246 @@ footer {
         margin: 10px 0;
     }
 }
+
+/* Template 2 styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9ff;
+    color: #333;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.cv-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 260px;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .profile-pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.sidebar .full-name {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.sidebar .job-title {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    list-style: none;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.skills-section,
+.languages-section {
+    margin-bottom: 20px;
+}
+
+.skills-section h3,
+.languages-section h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ffffff50;
+}
+
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.section-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+.section-card h2 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.section-card .item {
+    margin-bottom: 15px;
+}
+
+.section-card .item h3 {
+    font-size: 1.1rem;
+    color: #0f2745;
+}
+
+.section-card .item .date {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+    margin: 3px 0 5px;
+}
+
+.section-card .item p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Template 3 styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0faff;
+    color: #333;
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Info */
+.top-section {
+    background: linear-gradient(135deg, #58b4ae, #a4d4ae);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 5px solid #53a3ff;
+}
+
+.top-section .profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+}
+
+.top-section .info {
+    flex: 1;
+    color: #fff;
+    text-align: left; /* Force left alignment */
+}
+
+.top-section .info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+.top-section .info h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.skills-languages {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.skills-languages h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.skills-languages p {
+    font-size: 0.9rem;
+}
+
+/* Main Section */
+.main-content {
+    padding: 30px;
+}
+
+.section-card {
+    background-color: #e7f1ff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 80, 180, 0.1);
+}
+
+.section-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #275778;
+    border-left: 6px solid #53a3ff;
+    padding-left: 12px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+    display: block;
+}
+
+.item p {
+    font-size: 0.95rem;
+    color: #444;
+}
+

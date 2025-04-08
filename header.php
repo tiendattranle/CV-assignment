@@ -17,18 +17,18 @@
                         <option value="" disabled selected>CV</option>
                         <option value="demo.php">My CV</option>
                         <option value="Update_CV.php">Update CV</option>
-                        <option value="template.php">Create New CV</option>
+                        <option value="create_cv.php">Create New CV</option>
                     </select>
                 </li>
                 <li class="lists"><a class="options" href="template.php">Templates</a></li>
                 <li class="lists"><a class="options" href="#">Contact</a></li>
                 <li id="log_list">
                     <?php if (isset($_SESSION['username'])): ?>
-                        <a id="log_option" href="Login_dbo.php?logout='1'" class="btn">
+                        <a id="log_option" href="logout.php" class="btn">
                             <?php echo htmlspecialchars($_SESSION['username']) . " Logout"; ?>
                         </a>
                     <?php else: ?>
-                        <a id="log_option" href="login.php" class="btn">Login</a>
+                        <a id="log_option" href="logout.php" class="btn">Login</a>
                     <?php endif; ?>
                 </li>
             </ul>

@@ -3,7 +3,7 @@ session_start();
 include_once("config.php");
 include_once("login_db.php");
 
-$query = mysqli_query($conn, "SELECT * FROM cv_info WHERE username = '$_SESSION[username]'");
+$query = mysqli_query($conn, "SELECT * FROM cv_info WHERE username = '{$_SESSION['username']}' ORDER BY cv_created_at DESC LIMIT 1");
 $data = mysqli_fetch_array($query);
 mysqli_close($conn);
 ?>

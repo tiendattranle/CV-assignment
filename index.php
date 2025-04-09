@@ -14,19 +14,25 @@
         <nav class="navbar">
             <div class="logo"><a href="index.php">CV</a></div>
             <ul id="navbar" class="nav-links">
-                <li class="lists"><a href="?page=home">Home</a></li>
-                <li id="cv" class="lists"><a>CV Management</a>
+                <li><a href="?page=home">Home</a></li>
+                <li id="cv"><a>CV Management</a>
                     <ul class="dropdown">
-                        <li class="lists"><a href="?page=demo">My CV</a></li>
-                        <li class="lists"><a href="Update_CV.php">Update CV</a></li>
-                        <li class="lists"><a href="?page=create-cv">Create New CV</a></li>
+                        <li><a href="?page=demo">My CV</a></li>
+                        <li><a href="?page=update-cv">Update CV</a></li>
+                        <li><a href="?page=create-cv">Create New CV</a></li>
                     </ul>
                 </li>
-                <li class="lists"><a href="?page=template">Templates</a></li>
-                <li class="lists"><a href="?page=contatc">Contact</a></li>
-                <li id="log_list">
-                    
-                </li>
+                <li><a href="?page=template">Templates</a></li>
+                <li><a href="?page=contact">Contact</a></li>
+                <?php
+                    if (!isset($_SESSION["role"])) {
+                        echo '<li><a href="?page=log-in">Log in</a></li>
+                            <li><a href="?page=sign-up">Sign up</a></li>';
+                    }
+                    else {
+                        echo '<li><a href="?page=sign-out">Log out</a></li>';
+                    }
+                ?>
             </ul>
             <button class="menu-toggle">&#9776;</button>
         </nav>

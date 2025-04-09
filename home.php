@@ -2,7 +2,7 @@
     <div class="container">
         <h1>Our wweb</h1>
         <p>Cham ngon.</p>
-        <a href="template.php" class="btn">Create my CV</a>
+        <a href="?page=template" class="btn">Create my CV</a>
     </div>
 </section>
 <section class="features">

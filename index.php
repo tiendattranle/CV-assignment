@@ -23,7 +23,7 @@
                     </ul>
                 </li>
                 <li class="lists"><a href="template.php">Templates</a></li>
-                <li class="lists"><a href="#">Contact</a></li>
+                <li class="lists"><a href="?page=contact">Contact</a></li>
                 <li id="log_list">
                     
                 </li>

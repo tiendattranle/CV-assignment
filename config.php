@@ -1,14 +1,16 @@
 <?php
-$host = "localhost";  // XAMPP default
-$user = "root";       // Default user in XAMPP (no password by default)
-$password = "";       // No password in default XAMPP setup
-$database = "cv"; // Your database name
 
-// Create connection
-$conn = new mysqli($host, $user, $password, $database);
+$db_server = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "cv";
+$db_port = 3307;
 
-// Check connection
+$conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name, $db_port);
+
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 ?>

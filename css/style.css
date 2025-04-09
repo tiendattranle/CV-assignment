@@ -38,6 +38,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+
 .logo:hover {
     text-shadow: 0 0 10px #a38c6c;
 }
@@ -80,47 +81,60 @@ body {
     cursor: pointer;
 }
 
+/* CV Dropdown styled like other nav buttons */
 .lists {
-    display: inline-block;
-    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-/* Style the dropdown to look like a nav button */
+/* Wrapper to control alignment */
+.dropdown-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Make select look and align like other nav links */
 .cv-dropdown {
-    background-color: transparent; /* Blend with navbar background */
-    border: none; /* Remove default border */
-    padding: 10px 15px; /* Match typical nav link padding */
-    font-size: 16px; /* Match font size */
-    font-family: 'Bookman', sans-serif; /* Match font */
-    color: white; /* Match navbar text color */
+    background: none;
+    color: #5a4019;
+    font-size: 22px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    appearance: none; /* Remove default dropdown arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; /* Custom white dropdown arrow */
+    transition: background 0.3s, color 0.3s;
+    height: 100%;
+    align-items: center;
 }
 
-/* Remove outline on focus for better aesthetics */
-.cv-dropdown:focus {
-    outline: none;
-}
-
-/* Style the dropdown options */
-.cv-dropdown option {
-    background-color: #c0ab8c; /* Match navbar background */
-    color: white; /* Match text color */
-}
-
-/* Hover effect to match typical nav links */
+/* Match hover behavior */
 .cv-dropdown:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+    background: #7b613a;
+    color: #edddc1;
 }
 
-/* Ensure the dropdown aligns with other nav items */
-.lists .cv-dropdown {
-    display: inline-block;
+/* Dropdown options */
+.cv-dropdown option {
+    color: #000;
+    background: #fff;
 }
 
+/* Fix select alignment */
+.nav-links .lists {
+    display: flex;
+    align-items: center;
+}
+
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .cv-dropdown {
+        width: 100%;
+    }
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -500,6 +514,9 @@ footer {
         margin: 5px;
     }
 }
+
+
+
 
 /* contact Page */
 

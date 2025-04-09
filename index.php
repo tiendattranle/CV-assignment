@@ -1,14 +1,3 @@
-<?php
-include_once("login_db.php");
-
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
-
-<?php @include 'header.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,30 +10,50 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main class="main-content">
-        <!-- Home section now contains welcome content -->
-        <section class="home" style="background-image: url('images/contact.jpg'); background-size: cover;">
-            <div class="container">
-                <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-                <p>Create or update your CV with ease.</p>
-                <a href="template.php" class="btn">Create My CV</a>
-            </div>
-        </section>
-
-        <!-- Features section -->
-        <section class="features">
-            <div class="container">
-                <div class="feature-row" style="display: flex; gap: 80px;">
-                    <div class="feature-item">
-                        <i class="fas fa-pencil-alt"></i>
-                        <!-- Removed marquee as it was commented out -->
-                        <p>Start building your CV today!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.php">CV</a></div>
+            <ul id="navbar" class="nav-links">
+                <li class="lists"><a href="?page=home">Home</a></li>
+                <li id="cv" class="lists"><a>CV Management</a>
+                    <ul class="dropdown">
+                        <li class="lists"><a href="?page=demo">My CV</a></li>
+                        <li class="lists"><a href="Update_CV.php">Update CV</a></li>
+                        <li class="lists"><a href="?page=create-cv">Create New CV</a></li>
+                    </ul>
+                </li>
+                <li class="lists"><a href="template.php">Templates</a></li>
+                <li class="lists"><a href="#">Contact</a></li>
+                <li id="log_list">
+                    
+                </li>
+            </ul>
+            <button class="menu-toggle">&#9776;</button>
+        </nav>
+    </header>        
+    <main>
+    <?php
+                $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+                $allowed_pages = ['home', 'demo', 'create-cv', 'contact', 'log-in', 'sign-up', 'sign-out'];
+                if (in_array($page, $allowed_pages)) {
+                    
+                        include("$page.php");
+                } 
+                else {
+                    include("404.html"); 
+                }
+            ?>
     </main>
-
-    <?php @include 'footer.php'; ?>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">CV Builder</div>
+            <div class="footer-socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <div class="footer-text">© 2025 CV Builder. All rights reserved.</div>
+        </div>
+    </footer>
 </body>
 </html>

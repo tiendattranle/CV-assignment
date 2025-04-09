@@ -38,7 +38,8 @@
     </style>
 </head>
 <body>
-
+<?php @include 'header.php'; ?>
+<main>
 <div class="container">
     <!-- Left Side: Form -->
     <div class="form-container">
@@ -147,7 +148,7 @@
         </div>
     </div>
 </div>
-
+</main>
 <script>
     document.querySelectorAll("input, textarea, select").forEach(input => {
         input.addEventListener("input", function() {

@@ -15,6 +15,7 @@ if (isset($_SESSION['errorMessage'])) {
     unset($_SESSION['errorMessage']);
 }
 ?> -->
+<link rel="stylesheet" href="css/log-in.css">
 <div class="log-in-container">
     <form action="login_db.php" method="post" class="login-form">
         <div class="login-box">

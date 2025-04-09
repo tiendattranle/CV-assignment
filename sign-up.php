@@ -12,7 +12,8 @@
         return true;
     }
 </script>
-<div class="log-in-container">
+<link rel="stylesheet" href="css/sign-up.css">
+<div class="sign-up-container">
     <form action="register_db.php" method="post" onsubmit="return validateForm(event)">
         <h1>Create Account</h1>
         <input type="text" name="username" placeholder="Username" required>

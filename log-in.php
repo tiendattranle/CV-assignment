@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 include_once("login_db.php");
 
@@ -14,27 +14,33 @@ if (isset($_SESSION['errorMessage'])) {
     $errorMessage = $_SESSION['errorMessage'];
     unset($_SESSION['errorMessage']);
 }
-?>
-<form action="login_db.php" method="post">
-    <div class="login-box">
-        <img src="Image/avatar.png" id="avatar" alt="Avatar">
-        <h1>Sign In</h1>
-        <img src="Image/user.png" id="icon" alt="User Icon">
-        <input type="text" name="username" placeholder="Username" required>
-        <img src="Image/lock.png" id="icon2" alt="Lock Icon">
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <?php
-        // Display validation error if it exists
-        if (!empty($errorMessage)) {
-            echo "<span style='color:red; padding:20px;'>$errorMessage</span>";
-        }
-        ?>
-        <input type="submit" name="login" value="Login">
-        <a href="#">Forgot Password?</a>
-    </div>
-    <section id="line"></section>
-    <div class="reg-link">
-        <label>Don't have an account?</label>
-        <a href="register.php">REGISTER HERE</a>
-    </div>
-</form>
+?> -->
+<div class="log-in-container">
+    <form action="login_db.php" method="post" class="login-form">
+        <div class="login-box">
+            <img style="width: 30%; margin-bottom: auto; " src="https://cdn-icons-png.flaticon.com/512/1999/1999625.png" alt="Avatar">
+            <h1>Welcome Back Babyboo</h1>
+
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Username" required>
+                <i class="fas fa-user icon"></i>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class="fas fa-lock icon"></i>
+            </div>
+
+            <?php if (!empty($errorMessage)): ?>
+                <div class="error-message"><?= htmlspecialchars($errorMessage) ?></div>
+            <?php endif; ?>
+
+            <input type="submit" name="login" value="Login" class="btn-login">
+
+            <div class="reg-link">
+                <span>Don't have an account?</span>
+                <a style="text-decoration: none;" href="?page=sign-up">Sign Up Here</a>
+            </div>
+        </div>
+    </form>
+</div>

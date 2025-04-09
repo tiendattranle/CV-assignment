@@ -8,37 +8,25 @@
     <link rel="stylesheet" type="text/css" href="Navigation_bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sign-up.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo"><a href="index.php">CV</a></div>
-            <ul id="navbar">
-                <li><a href="?page=home">Home</a></li>
-                <li id="cv">
-                    <a>CV Management</a>
+            <ul id="navbar" class="nav-links">
+                <li class="lists"><a href="?page=home">Home</a></li>
+                <li id="cv" class="lists"><a>CV Management</a>
                     <ul class="dropdown">
-                        <li><a href="?page=demo">My CV</a></li>
-                        <li><a href="Update_CV.php">Update CV</a></li>
-                        <li><a href="?page=create-cv">Create New CV</a></li>
+                        <li class="lists"><a href="?page=demo">My CV</a></li>
+                        <li class="lists"><a href="Update_CV.php">Update CV</a></li>
+                        <li class="lists"><a href="?page=create-cv">Create New CV</a></li>
                     </ul>
                 </li>
-                <li><a href="template.php">Templates</a></li>
-                <li><a href="?page=contact">Contact</a></li>
-                <?php
-                    if (!isset($_SESSION["role"])) {
-                        echo '<li><a href="?page=log-in">Log in</a></li>
-                            <li><a href="?page=sign-up">Sign up</a></li>';
-                    }
-                    else if ($_SESSION["role"] == 'user') {
-                        echo '<li><a href="?page=sign-out">Log out</a></li>
-                            <li><a href="?page=cart">'.$_SESSION['username']."'s cart</a></li>";
-                    }
-                    else if ($_SESSION["role"] == 'admin') {
-                        echo '<li><a href="?page=sign-out">Log out</a></li>';
-                    }
-                ?>
+                <li class="lists"><a href="?page=template">Templates</a></li>
+                <li class="lists"><a href="?page=contatc">Contact</a></li>
+                <li id="log_list">
+                    
+                </li>
             </ul>
             <button class="menu-toggle">&#9776;</button>
         </nav>
@@ -46,7 +34,7 @@
     <main>
     <?php
                 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-                $allowed_pages = ['home', 'demo', 'create-cv', 'contact', 'log-in', 'sign-up', 'sign-out'];
+                $allowed_pages = ['home', 'demo', 'create-cv', 'template', 'contact', 'log-in', 'sign-up', 'sign-out'];
                 if (in_array($page, $allowed_pages)) {
                     
                         include("$page.php");

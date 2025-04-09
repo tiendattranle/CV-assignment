@@ -4,16 +4,19 @@ body {
     font-family: 'Bookman', sans-serif;
     margin: 0;
     padding: 0;
+    width: 98.9vw;
+    background-color: #f4f4f4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: #f4f4f4;
 }
 
 main {
     flex: 1;
 }
-
-/* Navigation Bar */
 .navbar {
-    width: 98vw;
+    width: 94.5vw;
     height: 3vw;
     display: flex;
     justify-content: space-between;
@@ -26,7 +29,6 @@ main {
 .logo {
     font-size: 2.4vw;
     font-weight: bold;
-    letter-spacing: 1px;
     margin-left: 25px;
     background: linear-gradient(90deg, #695749, #584432);
     background-size: 200% auto;
@@ -47,30 +49,33 @@ main {
     text-shadow: 0 0 10px #a38c6c;
 }
 
-.nav-links {
+.navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li {
-    display: inline;
+.navbar ul li {
+    display: inline-block;
+    padding: 1vw 0;
 }
 
-.nav-links a {
+.navbar ul a {
     text-decoration: none;
     color: #5a4019;
-    font-size: 22px;
-    padding: 15px 18px;
+    font-size: 1.2vw;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    background-color: #c0ab8c;
     transition: 0.3s;
-    border-radius: 8px;
+    border-radius: 1vw;
     font-weight: bold;
-    margin-right: 40px;
+    margin: 0 1vw;
 }
 
-.nav-links a:hover {
+.navbar ul a:hover {
     background: #7b613a;
     color: #edddc1;
 }
@@ -78,32 +83,37 @@ main {
 #cv {
     position: relative;
 }
-
+#cv .dropdown {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 0;
+}
+#cv:hover .dropdown {
+    display: block;
+}
+#cv:hover .dropdown li {
+    margin-top: 0;
+    background-color: #c0ab8c;
+    box-shadow: 4px 4px 10px 0px #333;
+}
 #cv li {
     width: 100%;
-    height: 100%;
+    height: 60%;
     display: flex;
+    align-items: center;
+    margin: 0;
 }
 
 #cv li a {
     width: 300%;
-    height: 100%;
+    height: 60%;
 }
 
-nav ul #cv .dropdown {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-    color: #365cae;
-    flex-direction: column;
-    padding: 0;
-    margin: 2% 0 0 0;
-}
 
-nav ul #cv:hover .dropdown {
-    display: block;
-}
 
 /* Mobile Navigation */
 .menu-toggle {
@@ -115,53 +125,17 @@ nav ul #cv:hover .dropdown {
     cursor: pointer;
 }
 
-.lists {
+.navbar ul li {
     display: inline-block;
     position: relative;
 }
 
-/* Style the dropdown to look like a nav button */
-.cv-dropdown {
-    display: inline-block;
-    position: relative;
-    background-color: transparent; /* Blend with navbar background */
-    border: none; /* Remove default border */
-    padding: 10px 15px; /* Match typical nav link padding */
-    font-size: 16px; /* Match font size */
-    font-family: 'Bookman', sans-serif; /* Match font */
-    color: white; /* Match navbar text color */
-    cursor: pointer;
-    appearance: none; /* Remove default dropdown arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center; /* Custom white dropdown arrow */
-}
 
-/* Remove outline on focus for better aesthetics */
-.cv-dropdown:focus {
-    outline: none;
-}
-
-/* Style the dropdown options */
-.cv-dropdown option {
-    background-color: #c0ab8c; /* Match navbar background */
-    color: white; /* Match text color */
-}
-
-/* Hover effect to match typical nav links */
-.cv-dropdown:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
-}
-
-/* Ensure the dropdown aligns with other nav items */
-.lists .cv-dropdown {
-    display: inline-block;
-}
 
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .nav-links {
+    .navbar ul {
         display: none;
         flex-direction: column;
         background: #222;
@@ -172,7 +146,7 @@ nav ul #cv:hover .dropdown {
         text-align: center;
     }
 
-    .nav-links.active {
+    .navbar ul:hover {
         display: flex;
     }
 
@@ -185,7 +159,7 @@ nav ul #cv:hover .dropdown {
 
 
 /* Footer */
-html, body {
+html{
     height: 100%;
     margin: 0;
     padding: 0;
@@ -284,7 +258,7 @@ footer {
 .home {
     background: #c0ab8c;
     color: white;
-    padding: 110px 0;
+    padding: 5vw 0;
     text-align: center;
 }
 
@@ -374,19 +348,6 @@ footer {
     transform: translateY(-10px);
 }
 
-
-/* Template Page */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    background-color: #f4f4f4;
-}
 
 /* Templates Section */
 .templates {
